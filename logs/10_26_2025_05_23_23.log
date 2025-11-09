@@ -1,0 +1,99 @@
+{"timestamp": "2025-10-26T09:29:42.647315Z", "level": "info", "event": "Initializing ApiKeyManager"}
+{"timestamp": "2025-10-26T09:29:42.649706Z", "level": "info", "event": "OPENAI_API_KEY loaded successfully from environment"}
+{"timestamp": "2025-10-26T09:29:42.649806Z", "level": "info", "event": "GOOGLE_API_KEY loaded successfully from environment"}
+{"timestamp": "2025-10-26T09:29:42.649842Z", "level": "info", "event": "GROQ_API_KEY loaded successfully from environment"}
+{"path": "/Users/nagarjunasanivarapu/Documents/KrishAcademy/MLOps/automated-research-report-generation/research_and_analyst/config/configuration.yaml", "keys": ["astra_db", "embedding_model", "retriever", "llm"], "timestamp": "2025-10-26T09:29:42.657224Z", "level": "info", "event": "Configuration loaded successfully"}
+{"config_keys": ["astra_db", "embedding_model", "retriever", "llm"], "timestamp": "2025-10-26T09:29:42.657385Z", "level": "info", "event": "YAML configuration loaded successfully"}
+{"provider": "openai", "model": "gpt-4o", "timestamp": "2025-10-26T09:29:42.657432Z", "level": "info", "event": "Loading LLM"}
+{"provider": "openai", "model": "gpt-4o", "timestamp": "2025-10-26T09:29:42.937678Z", "level": "info", "event": "LLM loaded successfully"}
+{"module": "AutonomousReportGenerator", "timestamp": "2025-10-26T09:29:42.938346Z", "level": "info", "event": "Building report generation graph"}
+{"module": "InterviewGraphBuilder", "timestamp": "2025-10-26T09:29:42.938742Z", "level": "info", "event": "Building Interview Graph workflow"}
+{"module": "InterviewGraphBuilder", "timestamp": "2025-10-26T09:29:42.943150Z", "level": "info", "event": "Interview Graph compiled successfully"}
+{"module": "AutonomousReportGenerator", "timestamp": "2025-10-26T09:29:42.946641Z", "level": "info", "event": "Report generation graph built successfully"}
+{"module": "ReportService", "topic": "current latest technilogies in US job market", "thread_id": "b8672a5e-037f-42aa-ae19-24d6b8342d99", "timestamp": "2025-10-26T09:29:42.946772Z", "level": "info", "event": "Starting report pipeline"}
+{"module": "AutonomousReportGenerator", "topic": "current latest technilogies in US job market", "timestamp": "2025-10-26T09:29:42.947928Z", "level": "info", "event": "Creating analyst personas"}
+HTTP Request: POST https://api.openai.com/v1/chat/completions "HTTP/1.1 200 OK"
+{"module": "AutonomousReportGenerator", "count": 3, "timestamp": "2025-10-26T09:29:53.073244Z", "level": "info", "event": "Analysts created"}
+{"timestamp": "2025-10-26T09:30:12.463029Z", "level": "info", "event": "Initializing ApiKeyManager"}
+{"timestamp": "2025-10-26T09:30:12.463595Z", "level": "info", "event": "OPENAI_API_KEY loaded successfully from environment"}
+{"timestamp": "2025-10-26T09:30:12.463661Z", "level": "info", "event": "GOOGLE_API_KEY loaded successfully from environment"}
+{"timestamp": "2025-10-26T09:30:12.463702Z", "level": "info", "event": "GROQ_API_KEY loaded successfully from environment"}
+{"path": "/Users/nagarjunasanivarapu/Documents/KrishAcademy/MLOps/automated-research-report-generation/research_and_analyst/config/configuration.yaml", "keys": ["astra_db", "embedding_model", "retriever", "llm"], "timestamp": "2025-10-26T09:30:12.465992Z", "level": "info", "event": "Configuration loaded successfully"}
+{"config_keys": ["astra_db", "embedding_model", "retriever", "llm"], "timestamp": "2025-10-26T09:30:12.466072Z", "level": "info", "event": "YAML configuration loaded successfully"}
+{"provider": "openai", "model": "gpt-4o", "timestamp": "2025-10-26T09:30:12.466170Z", "level": "info", "event": "Loading LLM"}
+{"provider": "openai", "model": "gpt-4o", "timestamp": "2025-10-26T09:30:12.466879Z", "level": "info", "event": "LLM loaded successfully"}
+{"module": "AutonomousReportGenerator", "timestamp": "2025-10-26T09:30:12.467163Z", "level": "info", "event": "Building report generation graph"}
+{"module": "InterviewGraphBuilder", "timestamp": "2025-10-26T09:30:12.470163Z", "level": "info", "event": "Building Interview Graph workflow"}
+{"module": "InterviewGraphBuilder", "timestamp": "2025-10-26T09:30:12.486990Z", "level": "info", "event": "Interview Graph compiled successfully"}
+{"module": "AutonomousReportGenerator", "timestamp": "2025-10-26T09:30:12.491934Z", "level": "info", "event": "Report generation graph built successfully"}
+{"module": "ReportService", "thread_id": "b8672a5e-037f-42aa-ae19-24d6b8342d99", "timestamp": "2025-10-26T09:30:12.493962Z", "level": "info", "event": "Feedback updated"}
+{"module": "InterviewGraphBuilder", "analyst": "Dr. Emily Carter", "timestamp": "2025-10-26T09:30:12.506432Z", "level": "info", "event": "Generating analyst question"}
+{"module": "InterviewGraphBuilder", "analyst": "Professor John Smith", "timestamp": "2025-10-26T09:30:12.508110Z", "level": "info", "event": "Generating analyst question"}
+{"module": "InterviewGraphBuilder", "analyst": "Sarah Lee", "timestamp": "2025-10-26T09:30:12.515840Z", "level": "info", "event": "Generating analyst question"}
+HTTP Request: POST https://api.openai.com/v1/chat/completions "HTTP/1.1 200 OK"
+{"module": "InterviewGraphBuilder", "question_preview": "Hello, I'm Alex Thompson, a journalist with a keen interest in labor market trends. Thank you for taking the time to speak with me today. I'm particularly interested in understanding how recent techno", "timestamp": "2025-10-26T09:30:15.357655Z", "level": "info", "event": "Question generated successfully"}
+{"module": "InterviewGraphBuilder", "timestamp": "2025-10-26T09:30:15.358488Z", "level": "info", "event": "Generating search query from conversation"}
+HTTP Request: POST https://api.openai.com/v1/chat/completions "HTTP/1.1 200 OK"
+{"module": "InterviewGraphBuilder", "question_preview": "Hello, I'm Alex Thompson, a fellow analyst interested in the intersection of technology and the job market. I'm eager to learn from your expertise. Could you share some specific examples of how AI and", "timestamp": "2025-10-26T09:30:15.692222Z", "level": "info", "event": "Question generated successfully"}
+{"module": "InterviewGraphBuilder", "timestamp": "2025-10-26T09:30:15.693108Z", "level": "info", "event": "Generating search query from conversation"}
+HTTP Request: POST https://api.openai.com/v1/chat/completions "HTTP/1.1 200 OK"
+{"module": "InterviewGraphBuilder", "question_preview": "Hello, I'm Alex Johnson, a researcher interested in workforce development and the future of work. Thank you for taking the time to speak with me today. \n\nTo start, could you share some insights on whi", "timestamp": "2025-10-26T09:30:16.267046Z", "level": "info", "event": "Question generated successfully"}
+{"module": "InterviewGraphBuilder", "timestamp": "2025-10-26T09:30:16.267410Z", "level": "info", "event": "Generating search query from conversation"}
+HTTP Request: POST https://api.openai.com/v1/chat/completions "HTTP/1.1 200 OK"
+{"module": "InterviewGraphBuilder", "query": "AI and automation job opportunities in the US 2023", "timestamp": "2025-10-26T09:30:16.748229Z", "level": "info", "event": "Performing Tavily web search"}
+HTTP Request: POST https://api.openai.com/v1/chat/completions "HTTP/1.1 200 OK"
+{"module": "InterviewGraphBuilder", "query": "latest technologies impacting US job market 2023", "timestamp": "2025-10-26T09:30:17.124391Z", "level": "info", "event": "Performing Tavily web search"}
+HTTP Request: POST https://api.openai.com/v1/chat/completions "HTTP/1.1 200 OK"
+{"module": "InterviewGraphBuilder", "query": "impact of robotics and AI on US job market employment patterns 2023", "timestamp": "2025-10-26T09:30:17.192872Z", "level": "info", "event": "Performing Tavily web search"}
+{"module": "InterviewGraphBuilder", "result_count": 5, "timestamp": "2025-10-26T09:30:19.165919Z", "level": "info", "event": "Web search completed"}
+{"module": "InterviewGraphBuilder", "analyst": "Professor John Smith", "timestamp": "2025-10-26T09:30:19.166455Z", "level": "info", "event": "Generating expert answer"}
+{"module": "InterviewGraphBuilder", "result_count": 5, "timestamp": "2025-10-26T09:30:19.976176Z", "level": "info", "event": "Web search completed"}
+{"module": "InterviewGraphBuilder", "analyst": "Dr. Emily Carter", "timestamp": "2025-10-26T09:30:19.977001Z", "level": "info", "event": "Generating expert answer"}
+{"module": "InterviewGraphBuilder", "result_count": 5, "timestamp": "2025-10-26T09:30:23.645700Z", "level": "info", "event": "Web search completed"}
+{"module": "InterviewGraphBuilder", "analyst": "Sarah Lee", "timestamp": "2025-10-26T09:30:23.646493Z", "level": "info", "event": "Generating expert answer"}
+HTTP Request: POST https://api.openai.com/v1/chat/completions "HTTP/1.1 200 OK"
+{"module": "InterviewGraphBuilder", "preview": "Expert: Certainly, Dr. Carter. In the current US job market, advancements in AI and automation are significantly influencing employment trends. For instance, the employment of computer and information", "timestamp": "2025-10-26T09:30:26.414576Z", "level": "info", "event": "Expert answer generated successfully"}
+{"module": "InterviewGraphBuilder", "message_count": 3, "timestamp": "2025-10-26T09:30:26.415227Z", "level": "info", "event": "Interview transcript saved"}
+{"module": "InterviewGraphBuilder", "analyst": "Dr. Emily Carter", "timestamp": "2025-10-26T09:30:26.415808Z", "level": "info", "event": "Generating report section"}
+HTTP Request: POST https://api.openai.com/v1/chat/completions "HTTP/1.1 200 OK"
+{"module": "InterviewGraphBuilder", "preview": "Expert: Certainly, Sarah. One of the most significant technologies impacting the US job market currently is artificial intelligence (AI). AI is expected to replace the equivalent of 300 million full-t", "timestamp": "2025-10-26T09:30:30.329470Z", "level": "info", "event": "Expert answer generated successfully"}
+{"module": "InterviewGraphBuilder", "message_count": 3, "timestamp": "2025-10-26T09:30:30.329892Z", "level": "info", "event": "Interview transcript saved"}
+{"module": "InterviewGraphBuilder", "analyst": "Sarah Lee", "timestamp": "2025-10-26T09:30:30.330240Z", "level": "info", "event": "Generating report section"}
+HTTP Request: POST https://api.openai.com/v1/chat/completions "HTTP/1.1 200 OK"
+{"module": "InterviewGraphBuilder", "preview": "Expert: Certainly. Recent technological advancements, particularly in artificial intelligence (AI), are significantly impacting the US job market. AI is expected to primarily affect occupations where ", "timestamp": "2025-10-26T09:30:30.386219Z", "level": "info", "event": "Expert answer generated successfully"}
+{"module": "InterviewGraphBuilder", "message_count": 3, "timestamp": "2025-10-26T09:30:30.386623Z", "level": "info", "event": "Interview transcript saved"}
+{"module": "InterviewGraphBuilder", "analyst": "Professor John Smith", "timestamp": "2025-10-26T09:30:30.387074Z", "level": "info", "event": "Generating report section"}
+HTTP Request: POST https://api.openai.com/v1/chat/completions "HTTP/1.1 200 OK"
+{"module": "InterviewGraphBuilder", "length": 4590, "timestamp": "2025-10-26T09:30:41.613484Z", "level": "info", "event": "Report section generated successfully"}
+HTTP Request: POST https://api.openai.com/v1/chat/completions "HTTP/1.1 200 OK"
+{"module": "InterviewGraphBuilder", "length": 3368, "timestamp": "2025-10-26T09:30:42.869045Z", "level": "info", "event": "Report section generated successfully"}
+HTTP Request: POST https://api.openai.com/v1/chat/completions "HTTP/1.1 200 OK"
+{"module": "InterviewGraphBuilder", "length": 4450, "timestamp": "2025-10-26T09:30:46.263741Z", "level": "info", "event": "Report section generated successfully"}
+{"module": "AutonomousReportGenerator", "topic": "current latest technilogies in US job market", "timestamp": "2025-10-26T09:30:46.266104Z", "level": "info", "event": "Generating conclusion"}
+{"module": "AutonomousReportGenerator", "topic": "current latest technilogies in US job market", "timestamp": "2025-10-26T09:30:46.266513Z", "level": "info", "event": "Writing report"}
+{"module": "AutonomousReportGenerator", "topic": "current latest technilogies in US job market", "timestamp": "2025-10-26T09:30:46.267184Z", "level": "info", "event": "Generating introduction"}
+HTTP Request: POST https://api.openai.com/v1/chat/completions "HTTP/1.1 200 OK"
+{"module": "AutonomousReportGenerator", "length": 742, "timestamp": "2025-10-26T09:30:50.449927Z", "level": "info", "event": "Conclusion generated"}
+HTTP Request: POST https://api.openai.com/v1/chat/completions "HTTP/1.1 200 OK"
+{"module": "AutonomousReportGenerator", "length": 881, "timestamp": "2025-10-26T09:30:52.760256Z", "level": "info", "event": "Introduction generated"}
+HTTP Request: POST https://api.openai.com/v1/chat/completions "HTTP/1.1 200 OK"
+{"module": "AutonomousReportGenerator", "timestamp": "2025-10-26T09:31:30.571151Z", "level": "info", "event": "Report written successfully"}
+{"module": "AutonomousReportGenerator", "timestamp": "2025-10-26T09:31:30.571612Z", "level": "info", "event": "Finalizing report compilation"}
+{"module": "AutonomousReportGenerator", "timestamp": "2025-10-26T09:31:30.571664Z", "level": "info", "event": "Report finalized"}
+{"module": "AutonomousReportGenerator", "topic": "current latest technilogies in US job market", "format": "docx", "timestamp": "2025-10-26T09:31:30.572242Z", "level": "info", "event": "Saving report"}
+{"module": "AutonomousReportGenerator", "path": "/Users/nagarjunasanivarapu/Documents/KrishAcademy/MLOps/automated-research-report-generation/generated_report/current_latest_technilogies_in_US_job_market_20251026_053130/current_latest_technilogies_in_US_job_market_20251026_053130.docx", "timestamp": "2025-10-26T09:31:30.593979Z", "level": "info", "event": "Report saved successfully"}
+{"module": "AutonomousReportGenerator", "topic": "current latest technilogies in US job market", "format": "pdf", "timestamp": "2025-10-26T09:31:30.594086Z", "level": "info", "event": "Saving report"}
+{"module": "AutonomousReportGenerator", "path": "/Users/nagarjunasanivarapu/Documents/KrishAcademy/MLOps/automated-research-report-generation/generated_report/current_latest_technilogies_in_US_job_market_20251026_053130/current_latest_technilogies_in_US_job_market_20251026_053130.pdf", "timestamp": "2025-10-26T09:31:30.598814Z", "level": "info", "event": "Centered PDF saved successfully"}
+{"module": "AutonomousReportGenerator", "path": "/Users/nagarjunasanivarapu/Documents/KrishAcademy/MLOps/automated-research-report-generation/generated_report/current_latest_technilogies_in_US_job_market_20251026_053130/current_latest_technilogies_in_US_job_market_20251026_053130.pdf", "timestamp": "2025-10-26T09:31:30.598874Z", "level": "info", "event": "Report saved successfully"}
+{"timestamp": "2025-10-26T09:31:35.238217Z", "level": "info", "event": "Initializing ApiKeyManager"}
+{"timestamp": "2025-10-26T09:31:35.238397Z", "level": "info", "event": "OPENAI_API_KEY loaded successfully from environment"}
+{"timestamp": "2025-10-26T09:31:35.238436Z", "level": "info", "event": "GOOGLE_API_KEY loaded successfully from environment"}
+{"timestamp": "2025-10-26T09:31:35.238467Z", "level": "info", "event": "GROQ_API_KEY loaded successfully from environment"}
+{"path": "/Users/nagarjunasanivarapu/Documents/KrishAcademy/MLOps/automated-research-report-generation/research_and_analyst/config/configuration.yaml", "keys": ["astra_db", "embedding_model", "retriever", "llm"], "timestamp": "2025-10-26T09:31:35.240254Z", "level": "info", "event": "Configuration loaded successfully"}
+{"config_keys": ["astra_db", "embedding_model", "retriever", "llm"], "timestamp": "2025-10-26T09:31:35.240429Z", "level": "info", "event": "YAML configuration loaded successfully"}
+{"provider": "openai", "model": "gpt-4o", "timestamp": "2025-10-26T09:31:35.240484Z", "level": "info", "event": "Loading LLM"}
+{"provider": "openai", "model": "gpt-4o", "timestamp": "2025-10-26T09:31:35.240921Z", "level": "info", "event": "LLM loaded successfully"}
+{"module": "AutonomousReportGenerator", "timestamp": "2025-10-26T09:31:35.241056Z", "level": "info", "event": "Building report generation graph"}
+{"module": "InterviewGraphBuilder", "timestamp": "2025-10-26T09:31:35.241831Z", "level": "info", "event": "Building Interview Graph workflow"}
+{"module": "InterviewGraphBuilder", "timestamp": "2025-10-26T09:31:35.250513Z", "level": "info", "event": "Interview Graph compiled successfully"}
+{"module": "AutonomousReportGenerator", "timestamp": "2025-10-26T09:31:35.256378Z", "level": "info", "event": "Report generation graph built successfully"}

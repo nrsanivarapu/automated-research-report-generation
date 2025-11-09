@@ -1,0 +1,53 @@
+# Custom Jenkins Dockerfile with Git and Safe Directory Configuration
+# For Research Report Generation CI/CD Pipeline
+
+FROM jenkins/jenkins:lts-jdk17
+
+# Switch to root to install packages
+USER root
+
+# Install Git, Python 3.11, Azure CLI, and Docker
+RUN apt-get update && \
+    apt-get install -y \
+    git \
+    python3 \
+    python3-pip \
+    python3-venv \
+    curl \
+    apt-transport-https \
+    ca-certificates \
+    gnupg \
+    lsb-release && \
+    # Install Azure CLI
+    curl -sL https://aka.ms/InstallAzureCLIDeb | bash && \
+    # Install Docker CLI
+    install -m 0755 -d /etc/apt/keyrings && \
+    curl -fsSL https://download.docker.com/linux/debian/gpg | gpg --dearmor -o /etc/apt/keyrings/docker.gpg && \
+    chmod a+r /etc/apt/keyrings/docker.gpg && \
+    echo "deb [arch=$(dpkg --print-architecture) signed-by=/etc/apt/keyrings/docker.gpg] https://download.docker.com/linux/debian $(lsb_release -cs) stable" | tee /etc/apt/sources.list.d/docker.list > /dev/null && \
+    apt-get update && \
+    apt-get install -y docker-ce-cli && \
+    # Clean up
+    rm -rf /var/lib/apt/lists/*
+
+# Configure Git safe.directory globally (system-wide)
+# This allows Jenkins to checkout repositories in any workspace directory
+RUN git config --system --add safe.directory "*" && \
+    git config --global --add safe.directory "*"
+
+# Verify installations
+RUN git --version && \
+    python3 --version && \
+    az --version && \
+    docker --version
+
+# Switch back to jenkins user
+USER jenkins
+
+# Set environment variables
+ENV JAVA_OPTS="-Djenkins.install.runSetupWizard=true"
+
+# Expose Jenkins port
+EXPOSE 8080
+
+# Jenkins will use the default entrypoint from the base image
