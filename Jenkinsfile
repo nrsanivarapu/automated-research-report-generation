@@ -41,7 +41,8 @@ pipeline {
             steps {
                 script {
                     echo 'Checking out code from Git...'
-                    cleanWs()
+                    // deleteDir() is used instead of cleanWs() for compatibility
+                    deleteDir()
                     checkout([
                         $class: 'GitSCM',
                         branches: [[name: '*/main']],
@@ -217,7 +218,7 @@ pipeline {
                 echo 'Cleaning workspace...'
                 // fix: wrap cleanup in node context
                 node {
-                    cleanWs()
+                        deleteDir()
                 }
             }
         }
